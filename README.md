@@ -52,6 +52,7 @@ But for our operations we need angles in the range 0 to 180 degrees. So we add 1
 ## Non Maximum Suppression:
 The Next step after finding the gradient is **thnning** or **Non Maximum suppression**. 
 
+
  
  
  
