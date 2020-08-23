@@ -50,7 +50,19 @@ But for our operations we need angles in the range 0 to 180 degrees. So we add 1
 
 
 ## Non Maximum Suppression:
-The Next step after finding the gradient is **thnning** or **Non Maximum suppression**. 
+The Next step after finding the gradient is **thnning** via **Non Maximum suppression**. 
+
+Thinning is a type of morphological operation, where given the segmented binary image, you try to reduce it into a series of white pixels connected with each other, rather than clusters connected.
+![alt text]()
+
+Non Maximum Suppression or NMS is one of the ways to perform thinning. The basic concept involves comparing the gradient magnitude with its neighbours in the gradient direction or angle.If the pixel value is less than either of the two then it is **suppressed** or assigned 0 pixel value. NMS using interpolation gives much better and acuurate results, but in my code I have not implemented the interpolation. Non maximum suppression without interpolation requires us to divide the 3x3 grid of pixels into 8 sections. Ie. if the gradient direction falls in between the angle -22.5 and 22.5, then we use the pixels that fall between this angle (r and q) as the value to compare with pixel p, see image below.
+![alt text]()
+
+**ALGORITHM APPLIED FOR NMS:**
+1. We divide the gradient angles in 4 parts or direction, 0deg region (0deg to 22.5 deg or 180 to 157.5) which consists of neighbours in East and West direction, 90deg region(67.5deg to 112.5deg) consisting the neighbours in north and south neighbours, 45deg(22.5deg to 67.5deg) which consists of neighbours in South-East and North-West directions, 135deg(112.5deg to 157.5deg) which consists of neighbours in South-West and North-East directions.
+2. Now we find run a loop and check the region of gradient angle of each pixel value. If it lies in 0deg region then the neighbours are, else if in 90deg region then the neighbours are , else if in 45deg region then the neighbours are and if in 135 deg region then the values 
+
+
 
 
  
