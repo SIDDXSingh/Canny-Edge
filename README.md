@@ -59,8 +59,11 @@ Non Maximum Suppression or NMS is one of the ways to perform thinning. The basic
 ![alt text]()
 
 **ALGORITHM APPLIED FOR NMS:**
-1. We divide the gradient angles in 4 parts or direction, 0deg region (0deg to 22.5 deg or 180 to 157.5) which consists of neighbours in East and West direction, 90deg region(67.5deg to 112.5deg) consisting the neighbours in north and south neighbours, 45deg(22.5deg to 67.5deg) which consists of neighbours in South-East and North-West directions, 135deg(112.5deg to 157.5deg) which consists of neighbours in South-West and North-East directions.
-2. Now we find run a loop and check the region of gradient angle of each pixel value. If it lies in 0deg region then the neighbours are, else if in 90deg region then the neighbours are , else if in 45deg region then the neighbours are and if in 135 deg region then the values 
+1. We divide the gradient angles in 4 parts or direction, 0deg region (0deg to 22.5 deg or 180 to 157.5), 90deg region(67.5deg to 112.5deg), 45deg(22.5deg to 67.5deg), 135deg(112.5deg to 157.5deg).
+2. Now we find run a loop and check the region of gradient angle of each pixel value. If it lies in 0deg region then the neighbours are in East and West direction, else if in 90deg region then the neighbours are in north and south neighbours, else if in 45deg region then the neighbours are in South-East and North-West direction and if in 135 deg region then the values in South-West and North-East directions.
+3. If the value of our pixel is less than the neighbours we suppress it or make it zero else we leave it as it is.
+
+## Hysterisis Threshholding:
 
 
 
