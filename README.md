@@ -43,7 +43,6 @@ We also need to find the gradient direction for the image. It can be found by us
 
 The result we get is in radians. For our convinience we convert our result in degrees.
 The range of arctan2 varies from *-180 deg to 180 deg.* Graph for arctan2 is given below.
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Atan2_argument_sign_graph.svg/750px-Atan2_argument_sign_graph.svg.png)
 
 
 But for our operations we need angles in the range 0 to 180 degrees. So we add 180 degrees to the gradient angle for all the values which are less than 0.
@@ -64,6 +63,7 @@ Non Maximum Suppression or NMS is one of the ways to perform thinning. The basic
 3. If the value of our pixel is less than the neighbours we suppress it or make it zero else we leave it as it is.
 
 ## Hysterisis Threshholding:
+
 
 
 
